@@ -1,0 +1,7 @@
+library-app/.gradle
+library-app-kotlin/.gradle
+
+library-app/build
+library-app-kotlin/build
+
+.idea
