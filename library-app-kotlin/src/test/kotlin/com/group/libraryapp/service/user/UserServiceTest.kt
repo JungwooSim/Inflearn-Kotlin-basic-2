@@ -22,6 +22,7 @@ class UserServiceTest @Autowired constructor(
 ) {
     @AfterEach
     fun clean() {
+        println("-----------------")
         userRepository.deleteAll()
     }
 
