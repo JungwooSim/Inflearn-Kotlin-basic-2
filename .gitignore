@@ -5,4 +5,8 @@ library-app-kotlin/.gradle
 library-app-kotlin/build
 library-app-kotlin/out
 
+study-library-app/.gradle
+study-library-app/build
+study-library-app/out
+
 .idea
