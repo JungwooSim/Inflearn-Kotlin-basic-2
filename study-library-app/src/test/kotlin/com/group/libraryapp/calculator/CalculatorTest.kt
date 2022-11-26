@@ -1,7 +1,5 @@
 package com.group.libraryapp.calculator
 
-import com.group.libraryapp.Calculator
-
 fun main() {
   val calculatorTest = CalculatorTest()
   calculatorTest.addTest()
