@@ -79,7 +79,7 @@ class BookServiceTest @Autowired constructor(
     @DisplayName("책 진작 대출되어 있다면, 신규 대출이 실패함")
     fun loanBookFailTest() {
         //given
-        bookRepository.save(Book.fixture("이상한 나라의 엘리스"))
+        bookRepository.save(Book.fixture("이상한 나라의 앨리스"))
         val savedUser = userRepository.save(
             User(
                 "big",
@@ -89,10 +89,10 @@ class BookServiceTest @Autowired constructor(
         userLoanHistoryRepository.save(
             UserLoanHistory.fixture(
                 savedUser,
-                "이상한 나라의 엘리스"
+                "이상한 나라의 앨리스"
             )
         )
-        val request = BookLoanRequest("big", "이상한 나라의 엘리스")
+        val request = BookLoanRequest("big", "이상한 나라의 앨리스")
 
         //when & then
         val message = assertThrows<IllegalArgumentException> {
