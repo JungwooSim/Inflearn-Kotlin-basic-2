@@ -9,6 +9,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import java.util.*
 
 @SpringBootTest
 class UserServiceTest @Autowired constructor(
@@ -56,8 +57,8 @@ class UserServiceTest @Autowired constructor(
   @Test
   fun updateUserNameTest() {
     //given
-    val savedUser = userRepository.save(User("A", null))
-    val request = UserUpdateRequest(savedUser.id, "B")
+    val savedUser = userRepository.save(User("A", null, Collections.emptyList(), null))
+    val request = UserUpdateRequest(savedUser.id!!, "B")
 
     //when
     userService.updateUserName(request)
